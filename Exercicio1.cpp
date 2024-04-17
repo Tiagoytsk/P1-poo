@@ -7,13 +7,7 @@ bool temdoisdecimais(float troco) {
     return abs(troco - aredondado) < 0.0001; 
 }
 bool checknotas(float valorpago){
-    if (valorpago/5==0){
-        return true;
-    }
-    else{
-        return false;
-    }
-
+    return fmod(valorpago, 5) == 0;
 }
 
 int main() {
@@ -24,7 +18,7 @@ int main() {
     {
         cout << "Introduza o valor do pagamento: ";
     cin >> valorpago;
-    if (temdoisdecimais(valorpago)==false || checknotas(valorpago)==true){
+    if (temdoisdecimais(valorpago)==false || !checknotas(valorpago)==true){
         cout << "\n\nValor invalido para pagamento!";
         return 0;
     }
