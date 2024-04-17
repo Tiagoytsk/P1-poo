@@ -7,7 +7,12 @@ bool temdoisdecimais(float troco) {
     return abs(troco - aredondado) < 0.0001; 
 }
 bool checknotas(float valorpago){
-    return fmod(valorpago, 5) == 0;
+    if (valorpago==5 || valorpago==10 || valorpago==20 || valorpago==50 || valorpago==100 || valorpago==200 || valorpago==500){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 int main() {
@@ -18,22 +23,22 @@ int main() {
     {
         cout << "Introduza o valor do pagamento: ";
     cin >> valorpago;
-    if (temdoisdecimais(valorpago)==false || !checknotas(valorpago)==true){
+    if (temdoisdecimais(valorpago)==false || checknotas(valorpago)==true){
         cout << "\n\nValor invalido para pagamento!";
         return 0;
     }
     else{
         troco=valorpago-valorpagamento;
-    if (troco<-0.01) {
+        if (troco<-0.01) {
         cout << "\n\nValor insuficiente para pagamento!";
         cout << "\n\nTroco: " << troco;
-    } 
-    else if ( temdoisdecimais(troco)==false)
-    {
+        } 
+        else if ( temdoisdecimais(troco)==false)
+        {
         cout << "\n\nValor invalido para pagamento!";
-    }
+         }
     
-    else {
+        else {
         cout << "\n\nTroco: " << troco;
         if (troco>=500) {
             cout << "\n\nNotas de 500 euros: " << trunc(troco/500);
@@ -86,14 +91,15 @@ int main() {
         if (troco>=0.05) {
             cout << "\nMoedas de 5 centimos: " << trunc(troco/0.05);
             troco=troco-0.05*(int)(troco/0.05);
+            cout << troco;
         }
         if (troco>=0.02) {
             cout << "\nMoedas de 2 centimos: " << trunc(troco/0.02);
             troco=troco-0.02*(int)(troco/0.02);
+            cout << troco;
         }
         if (troco>=0.01) {
-            cout << "\nMoedas de 1 centimo: " << trunc(troco/0.01);
-            troco=troco-0.01*(int)(troco/0.01);
+            cout << troco;
         }
 
         
