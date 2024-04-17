@@ -9,37 +9,13 @@ bool temdoisdecimais(float troco) {
 bool checknotas(float valorpago){
     if (valorpago==5 || valorpago==10 || valorpago==20 || valorpago==50 || valorpago==100 || valorpago==200 || valorpago==500){
         return true;
-    }
-    else{
+    }else{
         return false;
     }
 }
 
-int main() {
-    float valorpagamento, valorpago, troco;
-    cout << "Caixa de Pagamento\n So sao aceites notas <5, 10, 20, 50, 100, 200 e 500 euros>:\n\nValor a pagar: ";
-    cin >> valorpagamento;
-    if (temdoisdecimais(valorpagamento)==true)
-    {
-        cout << "Introduza o valor do pagamento: ";
-    cin >> valorpago;
-    if (temdoisdecimais(valorpago)==false || checknotas(valorpago)==true){
-        cout << "\n\nValor invalido para pagamento!";
-        return 0;
-    }
-    else{
-        troco=valorpago-valorpagamento;
-        if (troco<-0.01) {
-        cout << "\n\nValor insuficiente para pagamento!";
-        cout << "\n\nTroco: " << troco;
-        } 
-        else if ( temdoisdecimais(troco)==false)
-        {
-        cout << "\n\nValor invalido para pagamento!";
-         }
-    
-        else {
-        cout << "\n\nTroco: " << troco;
+int trocof(float valorpagamento,float valorpago, float troco){
+     cout << "\n\nTroco: " << troco;
         if (troco>=500) {
             cout << "\n\nNotas de 500 euros: " << trunc(troco/500);
             troco=troco-500*(int)(troco/500);
@@ -91,23 +67,46 @@ int main() {
         if (troco>=0.05) {
             cout << "\nMoedas de 5 centimos: " << trunc(troco/0.05);
             troco=troco-0.05*(int)(troco/0.05);
-            cout << troco;
         }
         if (troco>=0.02) {
             cout << "\nMoedas de 2 centimos: " << trunc(troco/0.02);
             troco=troco-0.02*(int)(troco/0.02);
+            troco = round(troco * 100) / 100;
+            
+        }
+        if (troco==0.01) {
+            troco = round(troco * 100) / 100;
             cout << troco;
         }
-        if (troco>=0.01) {
-            cout << troco;
-        }
+        return 0;
+}
 
-        
-    }
-    }
+int main() {
+    float valorpagamento, valorpago, troco;
+    cout << "Caixa de Pagamento\n So sao aceites notas <5, 10, 20, 50, 100, 200 e 500 euros>:\n\nValor a pagar: ";
+    cin >> valorpagamento;
+    if (temdoisdecimais(valorpagamento)==true)
+    {
+        cout << "Introduza o valor do pagamento: ";
+        cin >> valorpago;
+        if (checknotas(valorpago)==false){
+            cout << "\n\nValor invalido para pagamento!1";
+            return 0;
+        }
+        else{
+            troco=valorpago-valorpagamento;
+            if (troco<-0.01 || temdoisdecimais(troco)== false) {
+            cout << "\n\nValor insuficiente para pagamento!";
+            cout << "\n\nTroco: " << troco;
+            } 
+            else {
+                trocof(valorpagamento,valorpago,troco);
+            
+            }
+        }
     }
     else{
-        cout << "\n\nValor invalido para pagamento!";
+        cout << "\n\nValor invalido para pagamento!2";
     }
     
     
