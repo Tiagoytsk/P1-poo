@@ -74,9 +74,9 @@ int trocof(float valorpagamento,float valorpago, float troco){
             troco = round(troco * 100) / 100;
             
         }
-        if (troco==0.01) {
-            troco = round(troco * 100) / 100;
-            cout << troco;
+
+        if (abs(troco - 0.01) < 0.0001) {
+            cout << "\nMoedas de 1 centimo: 1";
         }
         return 0;
 }
