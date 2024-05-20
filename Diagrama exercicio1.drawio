@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net" modified="2024-05-20T10:28:48.279Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="_84wyWHdSzFctjzBdW7J" version="23.1.5" type="device">
+  <diagram name="Página-1" id="siJraIiXp4xMv06oVs8Q">
+    <mxGraphModel dx="1290" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-8" value="Sistema de Pagamentos" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="210" width="550" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="HezW99P1dnAXzv0C9Q0m-8" source="HezW99P1dnAXzv0C9Q0m-1" target="HezW99P1dnAXzv0C9Q0m-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="HezW99P1dnAXzv0C9Q0m-8" source="HezW99P1dnAXzv0C9Q0m-1" target="HezW99P1dnAXzv0C9Q0m-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="HezW99P1dnAXzv0C9Q0m-8" source="HezW99P1dnAXzv0C9Q0m-1" target="HezW99P1dnAXzv0C9Q0m-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="190" />
+              <mxPoint x="210" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-1" value="Cliente&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="HezW99P1dnAXzv0C9Q0m-8">
+          <mxGeometry x="60" y="100" width="80" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-12" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Introduzir&lt;br&gt;ticket&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" vertex="1" parent="HezW99P1dnAXzv0C9Q0m-8">
+          <mxGeometry x="280" y="50" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-14" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Introduzir&lt;br&gt;notas/moedas&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="HezW99P1dnAXzv0C9Q0m-8">
+          <mxGeometry x="280" y="145" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-16" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Retira &lt;br&gt;troco&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="HezW99P1dnAXzv0C9Q0m-8">
+          <mxGeometry x="280" y="250" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="HezW99P1dnAXzv0C9Q0m-8" source="HezW99P1dnAXzv0C9Q0m-19" target="HezW99P1dnAXzv0C9Q0m-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="HezW99P1dnAXzv0C9Q0m-8" source="HezW99P1dnAXzv0C9Q0m-19" target="HezW99P1dnAXzv0C9Q0m-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="HezW99P1dnAXzv0C9Q0m-8" source="HezW99P1dnAXzv0C9Q0m-19" target="HezW99P1dnAXzv0C9Q0m-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-19" value="Sistema" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="HezW99P1dnAXzv0C9Q0m-8">
+          <mxGeometry x="60" y="420" width="80" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-20" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Gerar &lt;br&gt;pagamentos&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="HezW99P1dnAXzv0C9Q0m-8">
+          <mxGeometry x="280" y="410" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-22" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Verifica valor&lt;br&gt;introduzido&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="HezW99P1dnAXzv0C9Q0m-8">
+          <mxGeometry x="280" y="500" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HezW99P1dnAXzv0C9Q0m-24" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Calcula troco&lt;br&gt;a devolver&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="HezW99P1dnAXzv0C9Q0m-8">
+          <mxGeometry x="280" y="590" width="180" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
