@@ -86,9 +86,9 @@ int main(){
                 if(cin.fail()) {
                     cin.clear(); 
                     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                    cout << "Invalid input. Please enter a number." << endl;
+                    cout << "Input invalido. Porfavor insira outro numero!" << endl;
                 } else if (cliente.numsapostados[j] < 1 || cliente.numsapostados[j] > 50) {
-                    cout << "Invalid input. Please enter a number between 1 and 50." << endl;
+                    cout << "Input invalido. Porfavor insira outro numero entre 1 e 50 sem repetir!" << endl;
                 } else {
                     bool alreadyUsed = false;
                     for (int i = 0; i < j; i++) {
@@ -98,7 +98,7 @@ int main(){
                         }
                     }
                     if (alreadyUsed) {
-                        cout << "Invalid input. You've already used this number." << endl;
+                        cout << "Input invalido. Porfavor insira outro numero este ja se encontra na aposta!" << endl;
                     } else {
                         break;
                     }
@@ -115,9 +115,9 @@ int main(){
                 if(cin.fail()) {
                     cin.clear(); 
                     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-                    cout << "Invalid input. Please enter a number." << endl;
+                    cout << "Input invalido. Porfavor insira outro numero!" << endl;
                 } else if (cliente.apestrela < 1 || cliente.apestrela > 12) {
-                    cout << "Invalid input. Please enter a number between 1 and 12." << endl;
+                    cout << "Input invalido. Porfavor insira outro numero entre 1 e 12 sem repetir!" << endl;
                 } else {
                     bool alreadyUsed = false;
                     for (int i = 0; i < k; i++) {
@@ -127,7 +127,7 @@ int main(){
                         }
                     }
                     if (alreadyUsed) {
-                        cout << "Invalid input. You've already used this number." << endl;
+                        cout << "Input invalido. Porfavor insira outro numero este ja se encontra na aposta!" << endl;
                     } else {
                         cliente.estrelasapostados[k] = cliente.apestrela;
                         break;
@@ -186,9 +186,9 @@ int main(){
                 if(cin.fail()) {
                     cin.clear(); 
                     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                    cout << "Invalid input. Please enter a number." << endl;
+                    cout << "Input invalido. Porfavor insira outro numero!" << endl;
                 } else if (cliente.numsapostados[j] < 1 || cliente.numsapostados[j] > 50) {
-                    cout << "Invalid input. Please enter a number between 1 and 50." << endl;
+                    cout << "Input invalido. Porfavor insira outro numero entre 1 e 50 sem repetir!" << endl;
                 } else {
                     bool alreadyUsed = false;
                     for (int i = 0; i < j; i++) {
@@ -198,7 +198,7 @@ int main(){
                         }
                     }
                     if (alreadyUsed) {
-                        cout << "Invalid input. You've already used this number." << endl;
+                        cout << "Input invalido. Porfavor insira outro numero este ja se encontra na aposta!" << endl;
                     } else {
                         break;
                     }
@@ -215,9 +215,9 @@ int main(){
                 if(cin.fail()) {
                     cin.clear(); 
                     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-                    cout << "Invalid input. Please enter a number." << endl;
+                    cout << "Input invalido. Porfavor insira outro numero!" << endl;
                 } else if (cliente.apestrela < 1 || cliente.apestrela > 12) {
-                    cout << "Invalid input. Please enter a number between 1 and 12." << endl;
+                    cout << "Input invalido. Porfavor insira outro numero entre 1 e 12 sem repetir!" << endl;
                 } else {
                     bool alreadyUsed = false;
                     for (int i = 0; i < k; i++) {
@@ -227,7 +227,7 @@ int main(){
                         }
                     }
                     if (alreadyUsed) {
-                        cout << "Invalid input. You've already used this number." << endl;
+                        cout << "Input invalido. Porfavor insira outro numero este ja se encontra na aposta!" << endl;
                     } else {
                         cliente.estrelasapostados[k] = cliente.apestrela;
                         break;
