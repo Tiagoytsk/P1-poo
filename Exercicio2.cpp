@@ -2,7 +2,7 @@
 #include <cmath>
 #include <random>
 #include <cstdlib>//para gerador de numeros
-#include <ctime>//
+#include <ctime>//para gerador de numeros gerar valor diferentes
 #include <cctype>
 using namespace std;
 
@@ -33,10 +33,10 @@ public:
 }cliente;
 
 int main(){
-    
-
     cliente.numap = 5;
     cliente.chaap=2;
+
+    //verifica o tipo de aposta
 
     do {
         cout << "Bem vindo ao Euromilhões! \nEscolha o tipo de aposta que deseja realizar: \n Aposta Simples (carregue S) \n Aposta Multipla (carregue M)";
@@ -50,13 +50,14 @@ int main(){
         do {
             cout << "Escolheu a Aposta Simples!\nQuantos boletins pertende apostar (1-5)? ";
             cin >> cliente.input;
+            //verifica se o numero e um digito dentre os parametros defenidos e se o mesmo nao e um inteiro
             if (std::isdigit(cliente.input[0]) && cliente.input[1] == '\0' && cliente.input[0] >= '1' && cliente.input[0] <= '5') {
                 cliente.nchaves = cliente.input[0] - '0';
                 break;
             } else {
                 cout << "Erro!! Valor invalido insira um valor entre 1 - 5" << endl;
             }
-    } while (true);
+    } while (true); //utilizado para criar um loop infinido para a aposta acaba quando os numeros sao introduzidos corretamente atravez de um break
         do{
         
             cout << "Aposta Gerada Automaticamente (Carregue A) ou pelp Proprio (Carregue P)?";
@@ -85,6 +86,7 @@ int main(){
 
                 if(cin.fail()) {
                     cin.clear(); 
+                //verifica se o numero e um digito dentre os parametros defenidos e se o mesmo nao e um inteiro
                     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                     cout << "Input invalido. Porfavor insira outro numero!" << endl;
                 } else if (cliente.numsapostados[j] < 1 || cliente.numsapostados[j] > 50) {
@@ -114,11 +116,12 @@ int main(){
 
                 if(cin.fail()) {
                     cin.clear(); 
+                //verifica se o numero e um digito dentre os parametros defenidos e se o mesmo nao e um inteiro
                     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
                     cout << "Input invalido. Porfavor insira outro numero!" << endl;
                 } else if (cliente.apestrela < 1 || cliente.apestrela > 12) {
                     cout << "Input invalido. Porfavor insira outro numero entre 1 e 12 sem repetir!" << endl;
-                } else {
+                } else {//verifica se o numero ja foi introduzido
                     bool alreadyUsed = false;
                     for (int i = 0; i < k; i++) {
                         if (cliente.estrelasapostados[i] == cliente.apestrela) {
