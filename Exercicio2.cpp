@@ -10,7 +10,7 @@ using namespace std;
 class Cliente {
 public:
     char tipoaposta, gerar,input[10];
-    int nchaves,apestrela,apnum, numap,chaap, numsapostados[10],estrelasapostados[2];
+    int nchaves,apestrela,apnum, numap,chaap, numsapostados[10],estrelasapostados[8];
     void apostaautomaticanum(char tipoaposta){
         cout<< "Chave: ";
         int maxNums = (tipoaposta == 'S' || tipoaposta == 's') ? 5 : 11;

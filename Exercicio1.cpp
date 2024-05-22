@@ -6,11 +6,10 @@ using namespace std;
 class pagamentos
 {
 private:
-    /* data */
 public:
+    double valorpagamento, valorpago, troco;
 
-
-    bool temdoisdecimais(float troco) {
+    bool temdoisdecimais(double troco) {
     double aredondado = round(troco * 100) / 100;
     return abs(troco - aredondado) < 0.0001; 
     }
@@ -31,7 +30,7 @@ public:
         return valor; 
     }
 
-    int trocof(float valorpagamento,float valorpago, float troco){
+    double trocof(double valorpagamento,double valorpago, double troco){
      cout << "\n\nTroco: " << troco;
         if (troco>=2) {
             cout << "\nMoedas de 2 euro: " << trunc(troco/2);
@@ -53,7 +52,7 @@ public:
             cout << "\nMoedas de 10 centimos: " << trunc(troco/0.1);
             troco=troco-0.1*(int)(troco/0.1);
         }
-        if (troco>=0.05) {
+        if (troco>=0.05 ) {
             cout << "\nMoedas de 5 centimos: " << trunc(troco/0.05);
             troco=troco-0.05*(int)(troco/0.05);
         }
@@ -79,26 +78,26 @@ public:
 //int pagamentos::trocof(float valorpagamento,float valorpago, float troco)
 
 int main() {
-    double valorpagamento, valorpago, troco;
-    valorpagamento = cliente.valor_pagamento();
-    cout << "Caixa de Pagamento\n So sao aceites notas <5, 10, 20, 50, 100, 200 e 500 euros>:\n\nValor a pagar: "<< valorpagamento << "\n\n";
-    if (cliente.temdoisdecimais(valorpagamento)==true)
+    
+    cliente.valorpagamento = cliente.valor_pagamento();
+    cout << "Caixa de Pagamento\n So sao aceites notas <5, 10, 20, 50, 100, 200 e 500 euros>:\n\nValor a pagar: "<< cliente.valorpagamento << "\n\n";
+    if (cliente.temdoisdecimais(cliente.valorpagamento)==true)
     {
         cout << "Introduza o valor do pagamento: ";
-        cin >> valorpago;
-        if (cliente.checknotas(valorpago)==false){
+        cin >> cliente.valorpago;
+        if (cliente.checknotas(cliente.valorpago)==false){
             cout << "\n\nValor invalido para pagamento!1";
             return 0;
         }
         else{
-            troco=valorpago-valorpagamento;
-            cout << "\n\nValor a pagar: " << valorpagamento;
-            if (troco<-0.01 || cliente.temdoisdecimais(troco)== false) {
+            cliente.troco=cliente.valorpago-cliente.valorpagamento;
+            cout << "\n\nValor a pagar: " << cliente.valorpagamento;
+            if (cliente.troco<-0.01 || cliente.temdoisdecimais(cliente.troco)== false) {
             cout << "\n\nValor insuficiente para pagamento!";
-            cout << "\n\nTroco: " << troco;
+            cout << "\n\nTroco: " << cliente.troco;
             } 
             else {
-                cliente.trocof(valorpagamento,valorpago,troco);
+                cliente.trocof(cliente.valorpagamento,cliente.valorpago,cliente.troco);
             }
         }
     }
